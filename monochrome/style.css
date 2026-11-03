@@ -109,6 +109,7 @@ header nav {
 				display: flex;
 				align-items: center;
 				height: 100%;
+
 				padding: 1em;
 				box-sizing: border-box;
 				border-radius: var(--border-radius);
@@ -130,6 +131,7 @@ footer {
 	padding: 2em;
 
 	color: var(--color-white);
+	background-color: var(--color-dark);
 
 	display: flex;
 	flex-direction: column;
