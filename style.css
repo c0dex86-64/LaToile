@@ -2,7 +2,28 @@
 	--black: #222;
 }
 
-.navigation {
+html, body, main, iframe {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+#nav.hidden {
+	right: -300px;
+
+	#burger {
+		right: 5px;
+		rotate: 180deg;
+
+		color: white;
+		background: center center url('assets/chevron_right_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg');
+		background-color: var(--black);
+		background-size: cover;
+	}
+}
+#nav {
 	width: 300px;
 	height: 100vh;
 
@@ -18,22 +39,38 @@
 		background-color: aquamarine;
 	}
 
-	/* #burger {
+	#burger {
 		position: fixed;
-		top: 15px;
-		right: 300px;
+		bottom: 5px;
+		right: 305px;
 
-		border: none;
+		width: 25px;
+		height: 25px;
 
-		width: 50px;
-		height: 50px;
-		background-color: red;
-	} */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border: 2px solid var(--black);
+		border-radius: 100%;
+		box-sizing: border-box;
+
+		font-size: 1.5em;
+		font-weight: 900;
+		text-align: center;
+
+		background: center center url('assets/chevron_right_24dp_222_FILL0_wght400_GRAD0_opsz24.svg');
+		background-color: white;
+		background-size: cover;
+	}
+	#burger:hover {
+		cursor: pointer;
+		box-shadow: inset 0 0 10px aquamarine;
+	}
 
 	nav:hover {
 		cursor: default;
 	}
-
 	nav {
 		height: 100%;
 
@@ -42,8 +79,8 @@
 		justify-content: space-between;
 
 		border-radius: 15px 0 0 0;
-
 		box-shadow: inset 0 0 1em aquamarine;
+		background-color: white;
 
 		* {
 			margin: 0;
@@ -67,42 +104,31 @@
 					font-weight: bold;
 					font-size: 1.5em;
 				}
-
-				.nav-home-button {
-					padding: 5px 10px;
-					border-radius: 50px;
-					border: solid var(--black);
-					background-color: var(--black);
-					color: white;
-					font-weight: bold;
-					font-size: 1em;
-					text-align: center;
-				}
-
-				.nav-home-button:hover {
-					cursor: pointer;
-					background-color: transparent;
-					color: var(--black);
-				}
 			}
 
 			.nav-list {
 				list-style-type: none;
 				padding: 0;
 
-				a {
+				button {
+					border: none;
+					display: block;
+					width: 100%;
+					padding: 0;
+					background-color: transparent;
 					color: var(--black);
-					text-decoration: none;
+					text-align: left;
+					padding: 0.3em 0 0.3em 1em;
 				}
-
-				li {
-					padding: 0.1em 0 0.1em 1em;
-				}
-
-				li:hover:not(.no-hover) {
+				button:hover {
+					cursor: pointer;
 					background-color: var(--black);
 					color: white;
 					font-weight: bold;
+				}
+
+				li:has(>.nav-list) button {
+					padding-left: 2em;
 				}
 			}
 		}
@@ -119,4 +145,10 @@
 			}
 		}
 	}
+}
+
+#content {
+	display: block;
+	width: 100%;
+	border: none;
 }
