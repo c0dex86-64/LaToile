@@ -63,27 +63,67 @@ section {
 }
 
 header {
+	position: sticky;
+	top: 0;
+
 	display: flex;
 	justify-content: space-between;
 	background-color: white;
 
-	padding: 3vh 3vw;
+	height: 15vh;
+}
+
+header a:has(>img) {
+	height: 100%;
+
+	padding: .5em;
+	box-sizing: border-box;
+}
+
+header a img {
+	height: 100%;
 }
 
 header nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 2em;
-}
+	height: 100%;
 
-header nav a {
-	color: var(--color-dark);
-	font-weight: bold;
-}
+	ul, ul li {
+		padding: 0;
+		height: 100%;
+	}
 
-header nav a:hover {
-	color: var(--color-light);
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		list-style: none;
+		margin: 0;
+
+		li {
+			--border-radius: .8em;
+			a {
+				color: var(--color-dark);
+				font-weight: bold;
+
+				display: flex;
+				align-items: center;
+				height: 100%;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: var(--border-radius);
+			}
+			a:hover {
+				background-color: var(--color-dark);
+				color: var(--color-white);
+			}
+		}
+
+		li:last-child a {
+			border-radius: var(--border-radius) 0 0 var(--border-radius);
+		}
+	}
+
 }
 
 footer {
@@ -120,6 +160,9 @@ footer .mail-contact {
 
 	padding-top: 20vh;
 	padding-bottom: 20vh;
+
+	box-sizing: border-box;
+	height: 85vh;
 }
 
 .hero div {
