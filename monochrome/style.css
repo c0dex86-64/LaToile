@@ -44,8 +44,8 @@ a {
 }
 
 .button {
-	padding: .5rem 2rem;
-	border-radius: .5rem;
+	padding: .5rem 1.5rem;
+	border-radius: .3rem;
 
 	width: fit-content;
 	font-size: .9rem;
@@ -209,7 +209,6 @@ footer {
 	color: var(--color-white);
 
 	h2 {
-		text-align: center;
 		margin-bottom: 1rem;
 	}
 
@@ -221,7 +220,8 @@ footer {
 	.sponsors {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-between;
+		margin: 4rem 0;
 		gap: 1rem;
 		width: 100%;
 
@@ -235,7 +235,7 @@ footer {
 	background-color: var(--color-white);
 	color: var(--color-dark);
 
-	.gallerie {
+	.galerie {
 		margin: 3rem 0;
 
 		display: flex;
@@ -245,7 +245,7 @@ footer {
 	}
 }
 
-.section-projets .gallerie article {
+.section-projets .galerie article {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
